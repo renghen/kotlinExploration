@@ -24,28 +24,6 @@ fun main() {
        }
     }
 
-    var result = 0
-    pytha(3,4){ result = it }
-    println(result)
-
-/*
-    fun <R>pytha(x: Int, y: Int) ={ kont: (Int) -> R ->
-        sq3{square3 ->
-            sq4{square4 ->
-                val wer = addCps<R>(square3,square4)
-                wer{kont(it)}
-            }
-        }
-    }*/
-
-   /* fun <R>pytha(x: Int, y: Int) = { kont: (Int) -> R ->
-            squareCps<Int>(x)() { xSquared ->
-                squareCps<Int>(y)() { ySquared ->
-                    //addCps<R>(xSquared, ySquared){2}
-                    kont(2)
-                }
-            }
-    }*/
-
-
+    val result = pytha(3,4){ we -> print(we)}
+    result.invoke()
 }
